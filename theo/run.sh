@@ -30,7 +30,6 @@ srun --ntasks=1 --mpi=pmix --container-name=nemo_container --container-mounts=$W
 
 srun --mpi=pmix --container-name=nemo_container --container-mounts=$WORKDIR:/workspace \
     bash -c '
-    ls /workspace/ && echo '"$INTERCEPTOR_LIB_NAME"' && \
     MAYA_LOG_LEVEL=DEBUG MAYA_OUTPUT_ROOT=/workspace LD_PRELOAD=/workspace/'"$INTERCEPTOR_LIB_NAME"' \
     python /workspace/cloudai_nemorun.py --yes --factory llama3_8b \
         log.ckpt.save_last=False \
