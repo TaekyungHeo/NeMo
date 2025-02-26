@@ -58,7 +58,7 @@ def chakra_callbacks() -> run.Config[ChakraCallback]:
         end_step=6,
         warmup_steps=1,
         active_steps=1,
-        trace_dir="/workspace/",
+        trace_dir="/workspace/maya_traces",
         library_path="/workspace/libinterceptor_trace_and_execute.so",
     )
 
@@ -115,7 +115,7 @@ def base_pretrain_config(args) -> run.Partial:
                     end_step=6,
                     warmup_steps=1,
                     active_steps=1,
-                    trace_dir="/workspace/",
+                    trace_dir="/workspace/maya_traces",
                     library_path="/workspace/libinterceptor_trace_and_execute.so",
                 )
             ],
